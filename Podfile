@@ -1,0 +1,6 @@
+platform :ios, '8.0'
+pod 'MJExtension'
+pod 'PureLayout'
+pod 'SDWebImage'
+pod 'MJRefresh'
+pod 'MBProgressHUD'

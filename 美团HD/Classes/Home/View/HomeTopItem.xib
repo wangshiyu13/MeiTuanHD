@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeTopItem">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Osw-xz-aWI" userLabel="分割线">
+                    <rect key="frame" x="5" y="5" width="1" height="25"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="rIZ-u3-0UM"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vk6-5R-FYi" userLabel="标题">
+                    <rect key="frame" x="46" y="0.0" width="86" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hH1-gl-4ak" userLabel="按钮图标">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="35"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" image="icon_district">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agH-aO-KZq" userLabel="子标题">
+                    <rect key="frame" x="46" y="15" width="86" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hH1-gl-4ak" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1OD-SI-ZlU"/>
+                <constraint firstAttribute="trailing" secondItem="agH-aO-KZq" secondAttribute="trailing" constant="8" id="6dK-7x-mvX"/>
+                <constraint firstItem="hH1-gl-4ak" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Gy2-li-XKi"/>
+                <constraint firstAttribute="trailing" secondItem="hH1-gl-4ak" secondAttribute="trailing" id="LrH-5h-zMA"/>
+                <constraint firstItem="Vk6-5R-FYi" firstAttribute="leading" secondItem="Osw-xz-aWI" secondAttribute="trailing" constant="40" id="YDK-zn-X7Q"/>
+                <constraint firstAttribute="bottom" secondItem="hH1-gl-4ak" secondAttribute="bottom" id="a4t-Tl-J2b"/>
+                <constraint firstItem="agH-aO-KZq" firstAttribute="leading" secondItem="Osw-xz-aWI" secondAttribute="trailing" constant="40" id="b5N-bj-oaB"/>
+                <constraint firstAttribute="bottom" secondItem="agH-aO-KZq" secondAttribute="bottom" id="dn4-KC-3bj"/>
+                <constraint firstAttribute="trailing" secondItem="Vk6-5R-FYi" secondAttribute="trailing" constant="8" id="hJi-he-n02"/>
+                <constraint firstItem="Osw-xz-aWI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="lAj-JG-BQX"/>
+                <constraint firstAttribute="bottom" secondItem="Osw-xz-aWI" secondAttribute="bottom" constant="5" id="mhQ-QC-T14"/>
+                <constraint firstItem="Vk6-5R-FYi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nez-UR-aJA"/>
+                <constraint firstItem="Osw-xz-aWI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="nwI-bG-iTh"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconButton" destination="hH1-gl-4ak" id="ZbC-zl-6S5"/>
+                <outlet property="subtitleLabel" destination="agH-aO-KZq" id="CI9-ez-ieq"/>
+                <outlet property="titleLabel" destination="Vk6-5R-FYi" id="0y4-zB-tyH"/>
+            </connections>
+            <point key="canvasLocation" x="541" y="424.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_district" width="30" height="30"/>
+    </resources>
+</document>

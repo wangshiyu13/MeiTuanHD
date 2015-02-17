@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CitiesViewController">
+            <connections>
+                <outlet property="tableView" destination="3V2-9a-0rx" id="3QU-f4-h9T"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="请输入城市名或者拼音" backgroundImage="bg_login_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="XAx-th-Jgv">
+                    <rect key="frame" x="15" y="15" width="570" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Roo-8p-mEo"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="X5d-Ma-Ul6"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3V2-9a-0rx">
+                    <rect key="frame" x="0.0" y="69" width="600" height="531"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Njq-DJ-X2O"/>
+                        <outlet property="delegate" destination="-1" id="ff0-wh-HGk"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="XAx-th-Jgv" secondAttribute="trailing" constant="15" id="AdC-5h-pcz"/>
+                <constraint firstItem="3V2-9a-0rx" firstAttribute="top" secondItem="XAx-th-Jgv" secondAttribute="bottom" constant="10" id="O8U-1Z-4pC"/>
+                <constraint firstAttribute="trailing" secondItem="3V2-9a-0rx" secondAttribute="trailing" id="QGq-eE-HQA"/>
+                <constraint firstAttribute="bottom" secondItem="3V2-9a-0rx" secondAttribute="bottom" id="Vx4-PF-BFI"/>
+                <constraint firstItem="3V2-9a-0rx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gY3-Y7-80a"/>
+                <constraint firstItem="XAx-th-Jgv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="ldg-99-dZf"/>
+                <constraint firstItem="XAx-th-Jgv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="w7A-Xr-YIV"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_login_textfield" width="9" height="11"/>
+    </resources>
+</document>

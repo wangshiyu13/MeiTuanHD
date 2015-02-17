@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryViewController">
+            <connections>
+                <outlet property="leftTableView" destination="Tio-kC-UiQ" id="bxT-a5-lbw"/>
+                <outlet property="rightTableView" destination="cUv-0d-hza" id="mQN-MX-lR5"/>
+                <outlet property="view" destination="iN0-l3-epB" id="eua-J9-kbE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Tio-kC-UiQ" userLabel="大分类">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="5eH-cf-HGO"/>
+                        <outlet property="delegate" destination="-1" id="evT-GF-OuB"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cUv-0d-hza" userLabel="小分类">
+                    <rect key="frame" x="300" y="0.0" width="300" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="wwh-Xy-ja2"/>
+                        <outlet property="delegate" destination="-1" id="uZQ-wI-U2A"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="cUv-0d-hza" firstAttribute="leading" secondItem="Tio-kC-UiQ" secondAttribute="trailing" id="Dmq-mC-oqe"/>
+                <constraint firstItem="Tio-kC-UiQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NyE-rt-efx"/>
+                <constraint firstAttribute="bottom" secondItem="Tio-kC-UiQ" secondAttribute="bottom" id="R8w-Rb-Nv3"/>
+                <constraint firstItem="Tio-kC-UiQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UNd-oa-Bf5"/>
+                <constraint firstAttribute="trailing" secondItem="cUv-0d-hza" secondAttribute="trailing" id="WSh-I9-6GN"/>
+                <constraint firstAttribute="bottom" secondItem="cUv-0d-hza" secondAttribute="bottom" id="g0F-6F-Nmv"/>
+                <constraint firstItem="cUv-0d-hza" firstAttribute="width" secondItem="Tio-kC-UiQ" secondAttribute="width" id="m2h-3x-1h9"/>
+                <constraint firstItem="cUv-0d-hza" firstAttribute="leading" secondItem="Tio-kC-UiQ" secondAttribute="trailing" id="oDD-mT-hXn"/>
+                <constraint firstItem="cUv-0d-hza" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oug-F1-jgm"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
