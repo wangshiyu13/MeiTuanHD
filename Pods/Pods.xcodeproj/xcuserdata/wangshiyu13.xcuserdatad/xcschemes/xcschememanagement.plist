@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-PinYin4Objc.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PureLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B76F2800BD74B0C6CB10B45</key>
+		<key>0DB2360988026B527057494E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1520976A25D5236460E09D0F</key>
+		<key>467FC212B8DE72DFB7632EE8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>37077CC466FE5E964EA7BF5A</key>
+		<key>840A8E3293A30C1C8296432F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3D7F904F4277A2AF6CDBA085</key>
+		<key>97A2B6906936C023733EEC7C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5F3CC3086FFAFCD11200FC34</key>
+		<key>9F4E95B6FAEB3AB8BE193CB1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CCC418439BC1C4DEDDDA565B</key>
+		<key>EA1F6898CC9760A7D9D781AD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB322815A56F942620B99C0B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

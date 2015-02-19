@@ -21,4 +21,12 @@
  *  返回所有的城市组数据（里面都是CityGroup模型）
  */
 + (NSArray *)cityGroups;
+/**
+ *  返回所有的城市的名字（里面都是CityNames模型）
+ */
++ (NSArray *)cityNames;
+/**
+ *  返回所有的城市（里面都是City模型）
+ */
++ (NSArray *)cities;
 @end
