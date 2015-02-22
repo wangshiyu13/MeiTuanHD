@@ -7,31 +7,14 @@
 //
 
 #import "SearchViewController.h"
-#import "SortViewController.h"
-#import "CategoryViewController.h"
-#import "DistrictViewController.h"
-#import "DetailViewController.h"
-#import "CollectViewController.h"
-#import "WSYNavigationController.h"
-#import "HistoryViewController.h"
-
-#import "Sort.h"
-#import "Categories.h"
-#import "City.h"
-#import "Districts.h"
 
 #import "DPAPI.h"
 #import "FindDealsResult.h"
-#import <MJExtension.h>
-#import <MJRefresh.h>
-#import "MBProgressHUD+MJ.h"
-#import <PureLayout.h>
-#import "DataTool.h"
-#import "AwesomeMenu.h"
-
 #import "UIBarButtonItem+Extension.h"
-#import "HomeTopItem.h"
-#import "DealCell.h"
+
+#import <MJRefresh.h>
+#import <MJExtension.h>
+#import "MBProgressHUD+MJ.h"
 
 @interface SearchViewController () <UISearchBarDelegate>
 /** 搜索框 */
