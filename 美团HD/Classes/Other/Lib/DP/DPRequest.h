@@ -16,8 +16,11 @@ typedef void (^DPBlock)(id result, NSError *error);
 @protocol DPRequestDelegate;
 
 @interface DPRequest : NSObject
-/** 请求后的回调 */
-@property (nonatomic, copy) DPBlock block;
+/** 请求成功后的回调 */
+@property (nonatomic, copy) DPSuccess success;
+/** 请求失败后的回调 */
+@property (nonatomic, copy) DPFailure failure;
+
 
 @property (nonatomic, weak) DPAPI *dpapi;
 @property (nonatomic, copy) NSString *url;

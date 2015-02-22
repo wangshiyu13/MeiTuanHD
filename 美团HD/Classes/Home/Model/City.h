@@ -15,4 +15,6 @@
 @property (nonatomic, copy) NSString *pinYin;
 /** 城市名称的拼音声母 */
 @property (nonatomic, copy) NSString *pinYinHead;
+/** 这个城市的所有区域（里面都是District模型） */
+@property (nonatomic, strong) NSArray *districts;
 @end

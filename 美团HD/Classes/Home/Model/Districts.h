@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface Districts : NSObject
-
+/** 区域名称 */
+@property (nonatomic, copy) NSString *name;
+/** 这个区域的所有子区域 */
+@property (nonatomic, strong) NSArray *subdistricts;
 @end

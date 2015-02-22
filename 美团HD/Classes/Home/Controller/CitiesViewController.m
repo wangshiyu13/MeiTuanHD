@@ -13,8 +13,9 @@
 #import "CityGroup.h"
 #import <PureLayout.h>
 @interface CitiesViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, weak) UIButton *cover;
+@property (nonatomic, weak) IBOutlet UIButton *cover;
 @property (nonatomic, weak) CityResultController *cityResultVC;
 @end
 
@@ -33,25 +34,11 @@
     return _cityResultVC;
 }
 
-- (UIButton *)cover {
-    if (_cover == nil) {
-        UIButton *cover = [[UIButton alloc] init];
-        cover.backgroundColor = [UIColor blackColor];
-        cover.alpha = 0.5;
-        [self.view addSubview:cover];
-        [cover autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
-        [cover autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.tableView];
-        [cover addTarget:self.view action:@selector(resignFirstResponder) forControlEvents:UIControlEventTouchUpInside];
-        _cover = cover;
-    }
-    return _cover;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"切换城市";
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"btn_navigation_close" highImage:@"btn_navigation_close_hl" target:self action:@selector(close)];
-    
+    [self.cover addTarget:self.searchBar action:@selector(resignFirstResponder) forControlEvents:UIControlEventTouchUpInside];
     self.tableView.sectionIndexColor = WSYColor(32, 191, 179);
 }
 
@@ -87,6 +74,8 @@
  */
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     [searchBar endEditing:YES];
+    searchBar.text = nil;
+    self.cityResultVC.view.hidden = YES;
 }
 /**
  *  搜索框文字改变
@@ -128,7 +117,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    // 销毁
+    [self dismissViewControllerAnimated:YES completion:nil];
+    // 取出城市名字
+    NSString *cityName = [[DataTool cityGroups][indexPath.section] cities][indexPath.row];
+    // 根据城市名字拿到城市模型
+    City *city = [DataTool cityWithName:cityName];
+    // 发出通知
+    [WSYNoteCenter postNotificationName:CityDidChangeNotification object:nil userInfo:@{CurrentCityKey : city}];
 }
 
 #pragma mark - dismiss方法

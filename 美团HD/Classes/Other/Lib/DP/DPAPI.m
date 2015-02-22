@@ -26,14 +26,15 @@ WSYSingleton_M
     DPRequest *request = [self requestWithURL:url params:mutableParams delegate:self];
     
     // 2.存储这次请求对应的block
-    request.block = ^(id result, NSError *error) {
-        if (result && success) {
-            success(result);
-        } else if (error && failure) {
-            failure(error);
-        }
-    };
-    
+//    request.block = ^(id result, NSError *error) {
+//        if (result && success) {
+//            success(result);
+//        } else if (error && failure) {
+//            failure(error);
+//        }
+//    };
+    request.success = success;
+    request.failure = failure;
     // 返回请求对象
     return request;
 }
@@ -46,7 +47,7 @@ WSYSingleton_M
  *  @param error   失败错误
  */
 - (void)request:(DPRequest *)request didFailWithError:(NSError *)error {
-    request.block(nil, error);
+    if (request.failure) request.failure(error);
 }
 
 /**
@@ -56,7 +57,7 @@ WSYSingleton_M
  *  @param result  请求结果
  */
 - (void)request:(DPRequest *)request didFinishLoadingWithResult:(id)result {
-    request.block(request, nil);
+    if (request.success) request.success(result);
 }
 
 #pragma mark - 原始代码

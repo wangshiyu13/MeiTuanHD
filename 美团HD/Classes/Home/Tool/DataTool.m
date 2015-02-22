@@ -60,4 +60,8 @@ static NSArray *_cities;
     return _cities;
 }
 
++ (City *)cityWithName:(NSString *)name {
+    if (name.length == 0) return nil;
+    return [[[self cities] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"name == %@", name]] firstObject];
+}
 @end

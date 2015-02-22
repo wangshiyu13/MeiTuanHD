@@ -7,7 +7,11 @@
 //
 
 #import "City.h"
+#import "Districts.h"
+#import <MJExtension.h>
 
 @implementation City
-
++ (NSDictionary *)objectClassInArray {
+    return @{@"districts" : [Districts class]};
+}
 @end

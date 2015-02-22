@@ -16,6 +16,15 @@
 
 + (void)initialize {
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"bg_navigationBar_normal"] forBarMetrics:UIBarMetricsDefault];
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    // 普通文字颜色
+    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
+    attrs[NSForegroundColorAttributeName] = WSYColor(21, 188, 173);
+    [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
+    // 不可使用文字颜色
+    NSMutableDictionary *disableattrs = [NSMutableDictionary dictionary];
+    disableattrs[NSForegroundColorAttributeName] = WSYColor(100, 100, 100);
+    [item setTitleTextAttributes:disableattrs forState:UIControlStateDisabled];
 }
 
 - (void)viewDidLoad {

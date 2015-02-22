@@ -25,6 +25,12 @@
     [super tearDown];
 }
 
+- (void)testCalendar {
+    NSCalendar *calender = [NSCalendar currentCalendar];
+    NSDateComponents *cmps = [calender components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond fromDate:[NSDate date]];
+    NSLog(@"%@", cmps);
+}
+
 - (void)testExample {
     // This is an example of a functional test case.
     XCTAssert(YES, @"Pass");

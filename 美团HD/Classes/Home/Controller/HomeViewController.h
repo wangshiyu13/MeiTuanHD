@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 wangshiyu13. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface HomeViewController : UICollectionViewController
+@interface HomeViewController : BaseViewController
 
 @end
